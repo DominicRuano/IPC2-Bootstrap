@@ -6,47 +6,55 @@
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        /* Establece el color de fondo personalizado y ajusta el contenedor */
         .custom-bg-color {
-            background-color: #3498db; /* Cambia el color de fondo a tu elección */
+            background-image: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(69,74,77,1) 79%, rgba(77,69,69,1) 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .custom-lg-color {
-            background-color: #296F9E; /* Cambia el color de fondo a tu elección */
+            background-color: gray;
         }
         .custom-form-container {
             background-color: #9E3A39;
             border: 1px solid #ddd;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .custom-container {
+            width: 35%; 
+            max-width: 800px; 
         }
     </style>
 </head>
 <body>
     <div class="custom-bg-color">
         <div class="container vh-100 d-flex justify-content-center align-items-center ">
-            <div class="border p-4 rounded custom-lg-color">
+            <div class="border p-4 rounded custom-container custom-lg-color">
                 <form>
-                    <legend>Inicio de Sesion</legend>
-                    <div    class="mb-3">
-                        <label for="disabledTextInput" class="form-label">Correo Electronico</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="correo@ejemplo.com">
+                    <legend style="text-align: center;">Inicio de sesión</legend>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">@</span>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                            <label for="floatingInputGroup1">User</label>
+                        </div>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
                     </div>
                     <div class="mb-3">
-                        <label for="disabledSelect" class="form-label">Disabled select menu</label>
-                        <select id="disabledSelect" class="form-select">
-                            <option>Disabled select</option>
-                    </select>
+                        <div class="mb-3">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                            <a href="#" class="text-decoration-none" style="float: right;">Olvido su contraseñá?</a>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-                        <label class="form-check-label" for="disabledFieldsetCheck">
-                            Can't check this
-                        </label>
+                    <div>
+                        <button type="button" class="btn btn-success">Log in</button>
+                        <button type="button" class="btn btn-dark" style="float: right;">Crear usuario</button>
                     </div>
-                    </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
